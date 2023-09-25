@@ -9,7 +9,7 @@ import {
   Badge,
 } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import profile from "/src/images/image-avatar.png";
+import profile from "/images/image-avatar.png";
 import { motion } from "framer-motion";
 import { styled } from '@mui/material/styles';
 
