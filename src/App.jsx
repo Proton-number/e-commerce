@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Nav from "./Components/Nav";
 import Middle from "./Components/Middle";
-import MobileNav from "./Components/mobileNav";
+import MobileNav from "./Components/MobileNav";
 import Cart from "./Components/Cart";
 import imageProduct1 from "/src/images/image-product-1.jpg";
 import imageProduct2 from "/src/images/image-product-2.jpg";
