@@ -4,27 +4,14 @@ import Nav from "./Components/Nav";
 import Middle from "./Components/Middle";
 import MobileNav from "./Components/MobileNav";
 import Cart from "./Components/Cart";
-import imageProduct1 from "/src/images/image-product-1.jpg";
-import imageProduct2 from "/src/images/image-product-2.jpg";
-import imageProduct3 from "/src/images/image-product-3.jpg";
-import imageProduct4 from "/src/images/image-product-4.jpg";
-import imageProduct1Thumbnail from "/src/images/image-product-1-thumbnail.jpg";
-import imageProduct2Thumbnail from "/src/images/image-product-2-thumbnail.jpg";
-import imageProduct3Thumbnail from "/src/images/image-product-3-thumbnail.jpg";
-import imageProduct4Thumbnail from "/src/images/image-product-4-thumbnail.jpg";
-const images = [
-  `${imageProduct1}`,
-  `${imageProduct2}`,
-  `${imageProduct3}`,
-  `${imageProduct4}`,
-];
 
-const imageThumbnail = [
-  `${imageProduct1Thumbnail}`,
-  `${imageProduct2Thumbnail}`,
-  `${imageProduct3Thumbnail}`,
-  `${imageProduct4Thumbnail}`,
-];
+const images = Array.from({ length: 4 }, (_, index) => {
+  return import(`/images/image-product-${index + 1}.jpg`);
+});
+
+const imageThumbnail = Array.from({ length: 4 }, (_, index) => {
+  return import(`/images/image-product-${index + 1}-thumbnail.jpg`);
+});
 
 function App() {
   const [open, setOpen] = useState(false);
