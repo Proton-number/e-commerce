@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   AppBar,
@@ -11,12 +10,11 @@ import {
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import profile from "/images/image-avatar.png";
 import { motion } from "framer-motion";
-import { styled } from '@mui/material/styles';
-
+import { styled } from "@mui/material/styles";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .MuiBadge-badge': {
-    backgroundColor:'hsl(27, 100%, 50%)'
+  "& .MuiBadge-badge": {
+    backgroundColor: "hsl(27, 100%, 50%)",
   },
 }));
 
@@ -85,11 +83,11 @@ function Nav({ handleOpen, itemCount }) {
           sx={{ alignItems: "center" }}
         >
           <IconButton onClick={handleOpen}>
-            <StyledBadge badgeContent={itemCount} color='secondary' >
-            <ShoppingCartOutlinedIcon
-              fontSize="medium"
-              sx={{ cursor: "pointer" }}
-            />
+            <StyledBadge badgeContent={itemCount} color="secondary">
+              <ShoppingCartOutlinedIcon
+                fontSize="medium"
+                sx={{ cursor: "pointer" }}
+              />
             </StyledBadge>
           </IconButton>
           <Box

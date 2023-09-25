@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Typography,
@@ -25,7 +25,7 @@ function Middle({
   setCart,
   setShowItems,
   itemCount,
-  setItemCount
+  setItemCount,
 }) {
   const [focus, setFocus] = useState(false);
   const [focus1, setFocus1] = useState(false);
@@ -49,10 +49,17 @@ function Middle({
     },
   };
 
+  // const addCartHandler = () => {
+  //   setCart([...cart, { cart: "" }]);
+  //   setShowItems(false);
+  //   setItemCount((prevItemCount) => prevItemCount + 1);
+  // };
+
+  // use currentIndex instead of an empty string
   const addCartHandler = () => {
-    setCart([...cart, { cart: "" }]);
+    setCart([...cart, currentIndex]);
     setShowItems(false);
-    setItemCount((prevItemCount) => prevItemCount + 1)
+    setItemCount((prevItemCount) => prevItemCount + 1);
   };
 
   return (
@@ -178,8 +185,8 @@ function Middle({
         </Typography>
         <Typography sx={{ opacity: "60%" }} variant="bod1">
           These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they'll withstand everything
-          the weather can offer.
+          Featuring a durable rubber outer sole, they&apos;ll withstand
+          everything the weather can offer.
         </Typography>
 
         <Stack
