@@ -24,7 +24,6 @@ function Middle({
   cart,
   setCart,
   setShowItems,
-  itemCount,
   setItemCount
 }) {
   const [focus, setFocus] = useState(false);
@@ -50,7 +49,8 @@ function Middle({
   };
 
   const addCartHandler = () => {
-    setCart([...cart, { cart: "" }]);
+    const newItem = { currentIndex, count };
+    setCart([...cart, newItem]);
     setShowItems(false);
     setItemCount((prevItemCount) => prevItemCount + 1)
   };

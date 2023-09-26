@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Nav from "./Components/Nav";
 import Middle from "./Components/Middle";
-import MobileNav from "./Components/MobileNav";
+
 import Cart from "./Components/Cart";
 import imageProduct1 from "/src/images/image-product-1.jpg";
 import imageProduct2 from "/src/images/image-product-2.jpg";
@@ -12,6 +12,7 @@ import imageProduct1Thumbnail from "/src/images/image-product-1-thumbnail.jpg";
 import imageProduct2Thumbnail from "/src/images/image-product-2-thumbnail.jpg";
 import imageProduct3Thumbnail from "/src/images/image-product-3-thumbnail.jpg";
 import imageProduct4Thumbnail from "/src/images/image-product-4-thumbnail.jpg";
+import MobileNav from "./Components/mobileNav";
 const images = [
   `${imageProduct1}`,
   `${imageProduct2}`,
@@ -28,17 +29,18 @@ const imageThumbnail = [
 
 function App() {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-    setPrice(count * 125 + ".00");
-  };
-  const handleClose = () => setOpen(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [count, setCount] = useState(0);
   const [price, setPrice] = useState(0);
   const [cart, setCart] = useState([]);
   const [showItems, setShowItems] = useState(true);
   const [itemCount, setItemCount] = useState(0);
+
+  const handleOpen = () => {
+    setOpen(true);
+    setPrice(count * 125 + ".00");
+  };
+  const handleClose = () => setOpen(false);
 
   return (
     <>
@@ -47,11 +49,9 @@ function App() {
         setItemCount={setItemCount}
         handleOpen={handleOpen}
       />
-      <MobileNav
-        itemCount={itemCount}
-        setItemCount={setItemCount}
-        handleOpen={handleOpen}
-      />
+
+      <MobileNav />
+    
       <Middle
         images={images}
         currentIndex={currentIndex}

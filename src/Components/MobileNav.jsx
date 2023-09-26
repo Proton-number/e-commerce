@@ -7,23 +7,21 @@ import {
   Drawer,
   Stack,
   AppBar,
-  Badge
+  Badge,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import profile from "/src/images/image-avatar.png";
-import { styled } from '@mui/material/styles';
-
+import { styled } from "@mui/material/styles";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .MuiBadge-badge': {
-    backgroundColor:'hsl(27, 100%, 50%)'
+  "& .MuiBadge-badge": {
+    backgroundColor: "hsl(27, 100%, 50%)",
   },
 }));
 
-function MobileNav({ handleOpen, itemCount,
-  setItemCount }) {
+function MobileNav({ handleOpen, itemCount, setItemCount }) {
   const [isDrawerOpen, setisDrawerOpen] = useState(false);
 
   return (
@@ -61,11 +59,11 @@ function MobileNav({ handleOpen, itemCount,
               sx={{ alignItems: "center", flexGrow: 10 }}
             >
               <IconButton onClick={handleOpen}>
-                <StyledBadge badgeContent={itemCount} color='secondary'>
-                <ShoppingCartOutlinedIcon
-                  fontSize="medium"
-                  sx={{ cursor: "pointer" }}
-                />
+                <StyledBadge badgeContent={itemCount} color="secondary">
+                  <ShoppingCartOutlinedIcon
+                    fontSize="medium"
+                    sx={{ cursor: "pointer" }}
+                  />
                 </StyledBadge>
               </IconButton>
               <Box
