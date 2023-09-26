@@ -25,7 +25,7 @@ function Cart({
   showItems,
   setShowItems,
   itemCount,
-  setItemCount
+  setItemCount,
 }) {
   const theme = createTheme({
     palette: {
@@ -42,7 +42,7 @@ function Cart({
     if (items.length === 0) {
       setShowItems(true);
     }
-    setItemCount((prevItemCount) => prevItemCount - 1)
+    setItemCount((prevItemCount) => prevItemCount - 1);
   };
 
   return (
@@ -95,42 +95,41 @@ function Cart({
               </Typography>
             ) : (
               <>
-                  {cart.map((cartItem, index) => {
-                    const { currentIndex, count } = cartItem;
-                    return (
-                      <Stack
-                        key={index}
-                        direction="row"
-                        sx={{
-                          alignItems: "center",
-                          justifyContent: "space-around",
-                        }}
-                      >
-                        <Box>
-                          <Box
-                            component="img"
-                            src={imageThumbnail[currentIndex]}
-                            width="50px"
-                          />
-                        </Box>
+                {cart.map((cartItem, index) => {
+                  const { currentIndex, count } = cartItem;
+                  return (
+                    <Stack
+                      key={index}
+                      direction="row"
+                      sx={{
+                        alignItems: "center",
+                        justifyContent: "space-around",
+                      }}
+                    >
+                      <Box>
+                        <Box
+                          component="img"
+                          src={imageThumbnail[currentIndex]}
+                          width="50px"
+                        />
+                      </Box>
 
-                        <Stack>
-                          <Typography sx={{ opacity: "60%" }} variant="bod1">
-                            Fall Limited Edition Sneakers{" "}
-                          </Typography>
-                    
-                          <Typography variant="bod1">
-                            <span> $125 x {count}</span> <b>$ {125 * count}</b>{" "}
-                          </Typography>
-                 
-                        </Stack>
+                      <Stack>
+                        <Typography sx={{ opacity: "60%" }} variant="bod1">
+                          Fall Limited Edition Sneakers{" "}
+                        </Typography>
 
-                        <IconButton onClick={() => removeHandler(index)}>
-                          <DeleteIcon />
-                        </IconButton>
+                        <Typography variant="bod1">
+                          <span> $125 x {count}</span> <b>$ {125 * count}</b>{" "}
+                        </Typography>
                       </Stack>
-                    )
-                  })}
+
+                      <IconButton onClick={() => removeHandler(index)}>
+                        <DeleteIcon />
+                      </IconButton>
+                    </Stack>
+                  );
+                })}
               </>
             )}
 

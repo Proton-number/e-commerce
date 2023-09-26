@@ -51,7 +51,7 @@ function App() {
       />
 
       <MobileNav />
-    
+
       <Middle
         images={images}
         currentIndex={currentIndex}
@@ -78,6 +78,7 @@ function App() {
         setCart={setCart}
         showItems={showItems}
         setShowItems={setShowItems}
+        setItemCount={setItemCount}
       />
     </>
   );
