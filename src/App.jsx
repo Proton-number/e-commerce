@@ -12,7 +12,7 @@ import imageProduct1Thumbnail from "/src/images/image-product-1-thumbnail.jpg";
 import imageProduct2Thumbnail from "/src/images/image-product-2-thumbnail.jpg";
 import imageProduct3Thumbnail from "/src/images/image-product-3-thumbnail.jpg";
 import imageProduct4Thumbnail from "/src/images/image-product-4-thumbnail.jpg";
-import MobileNav from "./Components/mobileNav";
+import MobileNav from "./Components/MobileNav";
 const images = [
   `${imageProduct1}`,
   `${imageProduct2}`,
