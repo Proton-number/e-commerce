@@ -56,11 +56,19 @@ function Middle({
   // };
 
   // use currentIndex instead of an empty string
+  // const addCartHandler = () => {
+  //   setCart([...cart, currentIndex]);
+  //   setShowItems(false);
+  //   setItemCount((prevItemCount) => prevItemCount + 1);
+  // };
+
   const addCartHandler = () => {
-    setCart([...cart, currentIndex]);
+    const newItem = { currentIndex, count };
+    setCart([...cart, newItem]);
     setShowItems(false);
     setItemCount((prevItemCount) => prevItemCount + 1);
   };
+  
 
   return (
     <Stack
