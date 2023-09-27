@@ -24,7 +24,7 @@ function Middle({
   cart,
   setCart,
   setShowItems,
-  setItemCount
+  setItemCount,
 }) {
   const [focus, setFocus] = useState(false);
   const [focus1, setFocus1] = useState(false);
@@ -52,7 +52,7 @@ function Middle({
     const newItem = { currentIndex, count };
     setCart([...cart, newItem]);
     setShowItems(false);
-    setItemCount((prevItemCount) => prevItemCount + 1)
+    setItemCount((prevItemCount) => prevItemCount + 1);
   };
 
   return (
@@ -79,6 +79,7 @@ function Middle({
               borderRadius: "15px",
               objectFit: "cover",
               transition: "transform 0.8s",
+              cursor: "pointer",
             }}
           />
         </Box>
@@ -105,6 +106,7 @@ function Middle({
             sx={{
               width: { xs: 0, sm: "100px", lg: "100px" },
               borderRadius: "10px",
+              cursor: "pointer",
             }}
           />
           <Box
@@ -123,6 +125,7 @@ function Middle({
             sx={{
               width: { xs: 0, sm: "100px", lg: "100px" },
               borderRadius: "10px",
+              cursor: "pointer",
             }}
           />{" "}
           <Box
@@ -141,6 +144,7 @@ function Middle({
             sx={{
               width: { xs: 0, sm: "100px", lg: "100px" },
               borderRadius: "10px",
+              cursor: "pointer",
             }}
           />{" "}
           <Box
@@ -159,6 +163,7 @@ function Middle({
             sx={{
               width: { xs: 0, sm: "100px", lg: "100px" },
               borderRadius: "10px",
+              cursor: "pointer",
             }}
           />
         </Stack>
