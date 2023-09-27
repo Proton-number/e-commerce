@@ -21,7 +21,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-function MobileNav({ handleOpen, itemCount, setItemCount }) {
+function NavMobile({ handleOpen, itemCount }) {
   const [isDrawerOpen, setisDrawerOpen] = useState(false);
 
   return (
@@ -123,4 +123,4 @@ function MobileNav({ handleOpen, itemCount, setItemCount }) {
   );
 }
 
-export default MobileNav;
+export default NavMobile;
