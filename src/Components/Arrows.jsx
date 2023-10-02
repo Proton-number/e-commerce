@@ -11,7 +11,7 @@ function Arrows({ images, currentIndex, setCurrentIndex }) {
         spacing={33.6}
         sx={{
           position: "absolute",
-          top: "30%",
+          top: "25%",
           left: "50%",
           transform: "translate(-50%, -50%)",
         }}

@@ -30,7 +30,7 @@ function NavMobile({ handleOpen, itemCount }) {
         id="mobileNav"
         sx={{ padding: "5px", backgroundColor: "white", color: "black" }}
       >
-        <Toolbar sx={{ alignItems: "center", justifyContent: "space-between" }}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <Stack direction="row" sx={{ alignItems: "center" }}>
             <IconButton
               edge="start"
@@ -55,8 +55,8 @@ function NavMobile({ handleOpen, itemCount }) {
           <Stack direction="row" sx={{ alignItems: "center" }}>
             <Stack
               direction="row"
-              spacing={1}
-              sx={{ alignItems: "center", flexGrow: 10 }}
+              spacing={2}
+              sx={{ alignItems: "center"}}
             >
               <IconButton onClick={handleOpen}>
                 <StyledBadge badgeContent={itemCount} color="secondary">
@@ -69,7 +69,7 @@ function NavMobile({ handleOpen, itemCount }) {
               <Box
                 component="img"
                 src={profile}
-                sx={{ width: "40%", height: "36px", cursor: "pointer" }}
+                sx={{ width: "25%",  cursor: "pointer" }}
               />
             </Stack>
           </Stack>

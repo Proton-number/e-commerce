@@ -63,19 +63,20 @@ function Middle({
       direction={{ xs: "column", lg: "row" }}
       spacing={{ sm: 6, lg: 18 }}
       sx={{
+        position:{xs:'relative', sm:'initial'},
         alignItems: "center",
         marginTop: { xs: "58px", sm: "100px", lg: 0 },
       }}
     >
       <Stack spacing={2}>
-        <Box sx={{ overFlow: "hidden" }}>
+              
+        <Box sx={{ overflow: "hidden", width: { xs: "368px", sm: "500px", lg: "484px" }, height: { sm: "450px", lg: "440px" },  }}>
           <Box
             component={motion.img}
             src={images[currentIndex]}
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.1}}
             sx={{
-              width: { xs: "368px", sm: "500px", lg: "484px" },
-              height: { sm: "450px", lg: "440px" },
+              width: "100%", height: "100%", objectFit:'cover',
               borderRadius: "15px",
               objectFit: "cover",
               transition: "transform 0.8s",
